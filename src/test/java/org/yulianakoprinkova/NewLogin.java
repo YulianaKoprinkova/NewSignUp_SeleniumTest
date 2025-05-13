@@ -4,11 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class NewLogin {
+
+    @BeforeTest
+    public void beforeSeleniumTestPrep () {
+
+    }
 
     @Test
     public void myNewSkilloUserSeleniumTest() throws InterruptedException {
@@ -53,19 +60,16 @@ public class NewLogin {
         newUserName.clear();
         newUserName.sendKeys("Name Name");
 
-
         WebElement email = driver.findElement(By.cssSelector(EMAIL_INPUT_FIELD_CSS));
 
         email.click();
         email.clear();
         email.sendKeys("myemail@provider.com");
 
-
         WebElement birthDate = driver.findElement(By.cssSelector(DOB_INPUT_FIELD_CSS));
         birthDate.click();
         birthDate.clear();
         birthDate.sendKeys("07/07/2011");
-
 
         WebElement password = driver.findElement(By.cssSelector(PASSWORD_INPUT_FIELD_CSS));
         password.click();
@@ -86,9 +90,13 @@ public class NewLogin {
         signInButton = driver.findElement(By.cssSelector(SIGN_IN_BUTTON_CSS));
         signInButton.click();
 
-
         driver.quit();
 
+
+    }
+
+    @AfterTest
+    public void beforeSeleniumTestPrep () {
 
     }
 
