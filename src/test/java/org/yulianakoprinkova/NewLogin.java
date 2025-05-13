@@ -13,8 +13,8 @@ import java.time.Duration;
 public class NewLogin {
 
     @BeforeTest
-    public void beforeSeleniumTestPrep () {
-
+    public void beforeSeleniumTest () {
+        System.out.println("Testing Registration of New User");
     }
 
     @Test
@@ -25,7 +25,9 @@ public class NewLogin {
 
         driver.get (LOGIN_PAGE_URL);
 
-        WebDriver.Timeouts timeouts = driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
+        driver.manage().window().maximize();
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -96,8 +98,8 @@ public class NewLogin {
     }
 
     @AfterTest
-    public void beforeSeleniumTestPrep () {
-
+    public void afterSeleniumTest () {
+        System.out.println("New Registration Test Was Executed");
     }
 
 }
