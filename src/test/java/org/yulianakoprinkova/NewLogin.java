@@ -26,22 +26,22 @@ public class NewLogin {
         //SIGNUP FORM
 
         //1.2. USERNAME
-        String NEW_USERNAME_INPUT_FIELD_CSS = "#Username";
+        String NEW_USERNAME_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"username\"]";
 
         //1.3. EMAIL
-        String EMAIL_INPUT_FIELD_CSS = "#email";
+        String EMAIL_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"email\"]";
 
         //1.3. DOB
-        String DOB_INPUT_FIELD_CSS = "#birthDate";
+        String DOB_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"birthDate\"]";
 
         //1.4. PASSWORD
-        String PASSWORD_INPUT_FIELD_CSS = "#password";
+        String PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"password\"]";
 
         //1.5 CONFIRM PASSWORD
-        String CONFIRM_PASSWORD_INPUT_FIELD_CSS = "#confirmPassword";
+        String CONFIRM_PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"confirmPassword\"]";
 
         //1.6 PUBLIC INFO
-        String PUBLIC_INFO_INPUT_FIELD_CSS = "#publicInfo";
+        String PUBLIC_INFO_INPUT_FIELD_CSS = "textarea.form-control[formcontrolname=\"publicInfo\"]";
 
         //1.7. SIGN IN BUTTON
         String SIGN_IN_BUTTON_CSS = "#sign-in-button";
@@ -54,7 +54,7 @@ public class NewLogin {
         //newUserName.clear();
         //Thread.sleep(1000);
 
-        newUserName.sendKeys("MyFirstName MyLastName");
+        newUserName.sendKeys("Name Name");
         Thread.sleep(1000);
 
         WebElement email = driver.findElement(By.cssSelector(EMAIL_INPUT_FIELD_CSS));
