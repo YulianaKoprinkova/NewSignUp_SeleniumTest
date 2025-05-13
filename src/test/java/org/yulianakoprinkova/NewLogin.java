@@ -1,16 +1,10 @@
 package org.yulianakoprinkova;
 
-import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import java.util.List;
-import java.util.Set;
-
-import static java.lang.Thread.sleep;
 
 public class NewLogin {
 
@@ -37,7 +31,7 @@ public class NewLogin {
         //1.4. PASSWORD
         String PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"password\"]";
 
-        //1.5 CONFIRM PASSWORD
+        //1.5 CONFIRM PASSWOR
         String CONFIRM_PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"confirmPassword\"]";
 
         //1.6 PUBLIC INFO
