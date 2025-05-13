@@ -26,7 +26,7 @@ public class NewLogin {
         //SIGNUP FORM
 
         //1.2. USERNAME
-        String NEW_USERNAME_INPUT_FIELD_CSS = "#username";
+        String NEW_USERNAME_INPUT_FIELD_CSS = "#Username";
 
         //1.3. EMAIL
         String EMAIL_INPUT_FIELD_CSS = "#email";
