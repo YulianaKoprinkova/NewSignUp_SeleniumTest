@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.lang.Math;
 
 import java.time.Duration;
 
@@ -76,12 +77,14 @@ public class NewLogin {
         WebElement password = driver.findElement(By.cssSelector(PASSWORD_INPUT_FIELD_CSS));
         password.click();
         password.clear();
-        password.sendKeys("MyPass#123");
+
+        double rand = Math.random();
+        password.sendKeys("A" + rand);
 
         WebElement confirmPassword = driver.findElement(By.cssSelector(CONFIRM_PASSWORD_INPUT_FIELD_CSS));
         confirmPassword.click();
         confirmPassword.clear();
-        confirmPassword.sendKeys("MyPass#123");
+        confirmPassword.sendKeys("A" + rand);
 
         WebElement publicInfo = driver.findElement(By.cssSelector(PUBLIC_INFO_INPUT_FIELD_CSS));
         publicInfo.click();
@@ -93,7 +96,6 @@ public class NewLogin {
         signInButton.click();
 
         driver.quit();
-
 
     }
 
