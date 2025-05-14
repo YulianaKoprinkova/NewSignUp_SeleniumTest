@@ -13,6 +13,40 @@ import java.time.Duration;
 
 public class NewLogin {
 
+    //UI MAP
+    //SIGNUP FORM
+    //
+
+    //1.2. USERNAME
+    String NEW_USERNAME_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"username\"]";
+
+    //1.3. EMAIL
+    String EMAIL_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"email\"]";
+
+    //1.3. DOB
+    String DOB_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"birthDate\"]";
+
+    //1.4. PASSWORD
+    String PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"password\"]";
+
+    //1.5 CONFIRM PASSWOR
+    String CONFIRM_PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"confirmPassword\"]";
+
+    //1.6 PUBLIC INFO
+    String PUBLIC_INFO_INPUT_FIELD_CSS = "textarea.form-control[formcontrolname=\"publicInfo\"]";
+
+    //1.7. SIGN IN BUTTON
+    String SIGN_IN_BUTTON_CSS = "#sign-in-button";
+
+
+    private WebDriver driver;
+
+
+    @BeforeTest
+    public void setUpDriver () {
+        driver = new ChromeDriver();
+    }
+
     @BeforeTest
     public void beforeSeleniumTest () {
         System.out.println("Testing Registration of New User");
@@ -20,7 +54,6 @@ public class NewLogin {
 
     @Test
     public void myNewSkilloUserSeleniumTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
 
         String LOGIN_PAGE_URL = "http://training.skillo-bg.com:4300/users/register";
 
@@ -32,30 +65,7 @@ public class NewLogin {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //UI MAP
-        //SIGNUP FORM
-        //
 
-        //1.2. USERNAME
-        String NEW_USERNAME_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"username\"]";
-
-        //1.3. EMAIL
-        String EMAIL_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"email\"]";
-
-        //1.3. DOB
-        String DOB_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"birthDate\"]";
-
-        //1.4. PASSWORD
-        String PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"password\"]";
-
-        //1.5 CONFIRM PASSWOR
-        String CONFIRM_PASSWORD_INPUT_FIELD_CSS = "input.form-control[formcontrolname=\"confirmPassword\"]";
-
-        //1.6 PUBLIC INFO
-        String PUBLIC_INFO_INPUT_FIELD_CSS = "textarea.form-control[formcontrolname=\"publicInfo\"]";
-
-        //1.7. SIGN IN BUTTON
-        String SIGN_IN_BUTTON_CSS = "#sign-in-button";
 
         WebElement newUserName = driver.findElement(By.cssSelector(NEW_USERNAME_INPUT_FIELD_CSS));
 
