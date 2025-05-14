@@ -109,6 +109,32 @@ public class NewLogin {
 
     }
 
+    public void textIntoElementCSS(String webElementLocator, String text) throws InterruptedException {
+
+        Thread.sleep(1000);
+
+        String locator = "input.form-control[formcontrolname=\"" + webElementLocator + " \"]";
+
+        if (driver.findElement(By.cssSelector(locator)).isDisplayed()) {
+
+            WebElement element = driver.findElement(By.cssSelector(locator));
+
+            System.out.println("The web element was found " + webElementLocator);
+
+            element.click();
+            element.clear();
+            element.sendKeys(text);
+
+        } else {
+
+            System.out.println("The web element was not  found ");
+        }
+
+        System.out.println("The user has provided text: " + text);
+
+
+  }
+
     @AfterTest
     public void afterSeleniumTest () {
         System.out.println("New Registration Test Was Executed");
