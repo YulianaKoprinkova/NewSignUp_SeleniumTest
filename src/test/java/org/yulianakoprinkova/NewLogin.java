@@ -56,7 +56,7 @@ public class NewLogin {
 
     @AfterMethod
     public void quitDriver() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(15000);
 
         if (driver != null) {
             driver.quit();
