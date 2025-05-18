@@ -99,8 +99,8 @@ public class NewLogin {
         String providePublicInfo = "AAaaBBbbCCcc";
         formFillOut(newUserPublicInfoField, providePublicInfo);
 
-        WebElement newUserSigInButton = driver.findElement(By.cssSelector(NEW_USER_SIGN_IN_BUTTON_CSS));
-        newUserSigInButton.click();
+        WebElement newUserSignInButton = driver.findElement(By.cssSelector(NEW_USER_SIGN_IN_BUTTON_CSS));
+        newUserSignInButton.click();
 
 
 
